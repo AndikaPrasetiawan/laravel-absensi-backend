@@ -24,14 +24,19 @@ class DatabaseSeeder extends Seeder
 
         // data dummy for company
         \App\Models\Company::create([
-            'name'=>'PT. FIC16',
-            'email'=>'fic16@codewithandika.com',
-            'address'=>'Jl. Ikan Tombro 9, Kota Malang',
-            'latitude'=>'-7.747033',
-            'longitude'=>'110.355398',
-            'radius_km'=>'0.5',
-            'time_in'=>'08:00',
-            'time_out'=>'17:00',
+            'name' => 'PT. FIC16',
+            'email' => 'fic16@codewithandika.com',
+            'address' => 'Jl. Ikan Tombro 9, Kota Malang',
+            'latitude' => '-7.747033',
+            'longitude' => '110.355398',
+            'radius_km' => '0.5',
+            'time_in' => '08:00',
+            'time_out' => '17:00',
+        ]);
+
+        $this->call([
+            AttendanceSeeder::class,
+            PermissionSeeder::class,
         ]);
     }
 }
